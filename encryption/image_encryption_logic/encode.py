@@ -5,7 +5,7 @@ from .utils import convert, add_zero
 def encryptImage(parameter_list):
     cover_img_path = parameter_list[0]
     secret_img_path = parameter_list[1]
-    op_path = 'encrypted_images/'+ parameter_list[2]+ '.png'
+    op_path = 'media/encryption_result.png'
     print(cover_img_path, secret_img_path, op_path)
     cover_img = Image.open(cover_img_path)
     secret_img = Image.open(secret_img_path)

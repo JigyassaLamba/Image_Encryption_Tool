@@ -5,7 +5,7 @@ from .utils import convert, add_zero
 def decryptImage(parameter_list):
 	print(parameter_list)
 	img_path = parameter_list[0]
-	op_path = 'encrypted_images/'+ parameter_list[1] + '.png'
+	op_path = 'media/decryption_result.png'
 	decoded_image = decode(Image.open(img_path))
 	decoded_image.save(op_path)
 	return op_path
