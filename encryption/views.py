@@ -5,7 +5,7 @@ from .image_encryption_logic import encode as e
 
 # Create your views here.
 def encryption(request):
-    if request.method == "POST":
+    if request.method == "POST":        
         if(ImageEncrytion.objects.all().count() >=2):
                 img_records = ImageEncrytion.objects.all()
                 for i in img_records:
@@ -37,4 +37,5 @@ def get_encrypted_image(request):
         parameter_list.append(entry.text)
         break
     op_path = e.encryptImage(parameter_list)
+    ImageEncrytion.objects.all().delete()
     return render(request,"encryptionresult.html", {'img_path': op_path})

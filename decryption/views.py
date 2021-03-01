@@ -36,4 +36,5 @@ def get_decrypted_image(request):
         parameter_list.append(entry.text)
         break
     op_path = d.decryptImage(parameter_list)
+    ImageDecryption.objects.all().delete()
     return render(request,"decryptionresult.html", {'img_path': op_path})
