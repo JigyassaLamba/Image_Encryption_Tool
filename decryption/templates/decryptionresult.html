@@ -1,21 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RESULT</title>
-</head>
-<body>
-    <h1>Decrypted Image</h1>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+      <script src=
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+    </script>
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Belleza", sans-serif}
+    .w3-bar,h1,button,a {font-family: "Montserrat", sans-serif}
+    .fa-anchor,.fa-coffee {font-size:200px}
+      .carousel-inner img {
+      width: 100%;
+      height: 100%;
+    }
+   
+    </style>
+      <title>Decryption</title>
+  </head>
+  <body>
+      <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" style="color: #272343;" >Image Encryption Tool</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li><a href="/">Home</a></li>
+              <li ><a href="/encryption/">Encryption</a></li>
+              <li class="active"><a href='/decryption/'>Decryption</a></li>
+            </ul>
+          </div>
+        </nav>
+  
+      <center>
+      <header class="w3-container w3-center" style="padding:2% 10%; background-color: #272343;">
+    <h1 class="w3-margin w3-jumbo" style="color: white;">DECRYPTION RESULT</h1>
+  </header>
+  <br><br>
     <div>
         <img src="/media/decryption_result.png" alt="My image" height="30%" width="30%" class="img-thumbnail">    
-        <br>          
-
-        <a href="/media/decryption_result.png" download> Download Image</a>
+        <br> <br>        
+        <button type="submit" class="btn btn-lg btn" style="background-image:linear-gradient(#9ba4b4, #9ba4b4)">
+            <a style="color: #14274e;" href="/media/decryption_result.png" download> Download Image</a>
+        </button>
 
 
     </div>
+    <br><br><br>
+</center>
     
 </body>
 </html>

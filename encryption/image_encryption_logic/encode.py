@@ -52,6 +52,7 @@ def encode(cover_img, secret_img):
 	secret_img_copy = secret_img.load()
 	width1, height1 = cover_img.size
 	width_h, height_h = secret_img.size
+
 	encoded_pix = binary_pixel(secret_img_copy, width_h, height_h)
 	encoded_image = change(encoded_image, encoded_pix, width1, height1, width_h, height_h)
 	return cover_img

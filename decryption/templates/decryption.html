@@ -1,16 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport"
+  content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src=
+  "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+  </script>
+    <script src=
+  "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+  </script>
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Belleza", sans-serif}
+    .w3-bar,h1,button,a {font-family: "Montserrat", sans-serif}
+    .fa-anchor,.fa-coffee {font-size:200px}
+      .carousel-inner img {
+      width: 100%;
+      height: 100%;
+    }
+    </style>
     <title>Decryption</title>
 </head>
 <body>
-    {% if obj %}
-    <h1>Image Successfully Uploaded</h1>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" style="color: #272343;" >Image Encryption Tool</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/encryption/">Encryption</a></li>
+            <li class="active"><a href='/decryption/'>Decryption</a></li>
+          </ul>
+        </div>
+      </nav>
+    <header class="w3-container w3-center" style="padding:2% 10%; background-color: #272343;">
+  <h1 class="w3-margin w3-jumbo" style="color: white;">DECRYPTION</h1>
+</header>
+
+    <div class="container" style="margin-top: 5%;">
+    {% if countIs1 %}
+    <h1>Image Uploaded Successfully</h1>
     {% else %}
-    <h1>Upload encrypted image</h1>
+    <h1>Upload Encrypted image</h1>
     {% endif %}
     <div class="container">
       
@@ -19,7 +59,7 @@
             {% csrf_token %}
             {{form.as_p}}
            
-            <button type="submit" class="btn btn-lg btn-success">Upload</button>
+            <button type="submit" class="btn btn-lg btn" style="background-image:linear-gradient(#9ba4b4, #9ba4b4)">Upload</button>
         </form>
        
         <hr>
@@ -29,7 +69,7 @@
         {% if forloop.first %}<div class="row ">{% endif %}
             <div class="col-lg-4 col-md-4 col-12" >
         <div class="text-center mt-2">
-            <img src="{{x.image.url}}"  height="30%" width="30%" class="img-thumbnail" alt="...">
+            <img src="{{x.image.url}}"  height="50%" width="50%" class="img-thumbnail" alt="...">
             <h2 class="text-center" >{{x.text}}</h2></div>
             </div>
             {% if forloop.counter|divisibleby:3 %}
@@ -40,7 +80,7 @@
     
         {% endfor %}
         {% if countIs1 %}
-        <button><a href="/decryption/result">Click</a></button>
+        <button type="submit" class="btn btn-lg btn" style="background-image:linear-gradient(#9ba4b4, #9ba4b4)"><a href="/decryption/result" style="color: #14274e;">Decrypt</a></button>
         {% endif %}
     </div>
 </body>

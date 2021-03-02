@@ -17,11 +17,16 @@ def encryption(request):
             obj=form.instance
             img=ImageEncrytion.objects.all()
             form=ImageForm()   
-            if img.count() == 2: 
-                count = True 
+            if img.count() == 1: 
+                count1 = True 
+                count2=False
+            elif img.count() == 2: 
+                count2 = True 
+                count1= False
             else:
-                count = False
-            return render(request,"encryption.html", {"obj":obj, "img":img , "form": form, "countIs2": count})  
+                count2 = False
+                count1= False
+            return render(request,"encryption.html", {"obj":obj, "img":img , "form": form, "countIs2": count2, "countIs1": count1})  
     else:
         form=ImageForm()    
         img=ImageEncrytion.objects.all()
