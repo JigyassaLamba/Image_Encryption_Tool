@@ -8,13 +8,18 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src=
+  "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+  </script>
+    <script src=
+  "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+  </script>
+
   <style>
-  body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-  .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Belleza", sans-serif}
+  .w3-bar,h1,button,a {font-family: "Montserrat", sans-serif}
   .fa-anchor,.fa-coffee {font-size:200px}
     .carousel-inner img {
     width: 100%;
@@ -50,7 +55,7 @@ html {
 .about-section {
   padding: 50px;
   text-align: center;
-  background-color: #474e5d;
+  background-color: #394867;
   color: white;
 }
 
@@ -65,7 +70,7 @@ html {
 }
 
 .title {
-  color: grey;
+  color: #66FCF1;
 }
 
 
@@ -78,29 +83,40 @@ html {
 </style>
     <title>Home</title>
 </head>
-<body>
-
+<body style="background-color: 394867;">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" style="color: #272343;" >Image Encryption Tool</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">Home</a></li>
+        <li ><a href="/encryption/">Encryption</a></li>
+        <li><a href='/decryption/'>Decryption</a></li>
+      </ul>
+    </div>
+  </nav>
     <!-- Header -->
-<header class="w3-container w3-red w3-center" style="padding:128px 16px">
-  <h1 class="w3-margin w3-jumbo">IMAGE ENCRYPTION DECRYPTION TOOL</h1>
-  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><a href="/encryption">Encryption</a></button>
-  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><a href="/decryption">Decryption</a></button>
-</header>
+<header class="w3-container w3-center" style="padding:2% 10%; background-image: linear-gradient(#272343, #272343);">
+  <h3 class="w3-margin w3-jumbo" style="color: white;">IMAGE ENCRYPTION AND DECRYPTION TOOL</h3>
+    <br></header>
 
-    <div class="w3-row-padding w3-padding-64 w3-container">
+    <div class="w3-row-padding w3-padding-64 w3-container"  >
   <div class="w3-content">
-    <div class="w3-twothird">
-      <h1>Encryption</h1>
+    <h1>Encryption</h1>
+    <div class="w3-twothird" style="color: white;">
       <p class="w3-text-grey">This functionality allows the user to encrypt the images.The script lets you hide an image by encoding it into the least significant bit positions of a subset of pixels in another image. The encoded image can be afterwards decoded and recovered without any information loss.The encoding takes two images as the input. The first image is the one that we want to use to hide something in.The second image is the one that we want to hide and conceal in the first image.The first image, used for hiding, has to satisfy the condition that the number of its pixels is at least two times bigger than that of the image which we hide.
 
 The result of the encoding is an image that visually should not look much different from the original image, but the least significant bits of a subset of pixels are replaced with the pixel information of the image that we want to hide.
 
 
 </p>
+<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" style="background-image:linear-gradient(#9ba4b4, #9ba4b4) ;border-radius: 20%;margin-right: 50%;"><a href="/encryption" style="color: #14274e;">Encrypt Image</a></button>
+
     </div>
 
     <div class="w3-third w3-center">
-      <i class="fa fa-lock w3-padding-64 w3-text-red" style = "font-size:150px"></i>
+      <i class="fa fa-lock w3-padding-64" style = "font-size:150px; color:   #14274e;"></i>
     </div>
   </div>
 </div>
@@ -109,13 +125,15 @@ The result of the encoding is an image that visually should not look much differ
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-third w3-center">
-      <i class="fa fa-unlock w3-padding-64 w3-text-red w3-margin-right" style = "font-size:150px" ></i>
+      <i class="fa fa-unlock w3-padding-64 w3-margin-right" style = "font-size:150px; color:   #14274e;" ></i>
     </div>
 
     <div class="w3-twothird">
       <h1>Decryption</h1>
 
       <p class="w3-text-grey">Decryption is the functionality to decode the encrypted image which is hidden under the cover image.The decoding takes an image with another image encoded inside as the input.The decoded output image is identical to the image that was hidden and encoded in another image.</p>
+      <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" style="background-image:linear-gradient(#9ba4b4, #9ba4b4) ;border-radius: 20%;margin-left: 10%;"><a href="/decryption"  style="color: #14274e;">Decrypt Image</a></button>
+
     </div>
   </div>
 </div>
@@ -125,52 +143,33 @@ The result of the encoding is an image that visually should not look much differ
 </div>
 <div class="row">
   <div class="column">
-    <div class="card">
-      <img src="media/aboutus/anina.jpg" alt="Jane" style="width:100%">
-      <div class="container">
-        <h2>Anina Pillai</h2>
-        <p class="title">1811034 | TY Comps A</p>
-        <p>anina.pillai@somaiya.edu</p>
-
-      </div>
+    <div style="height: 50%; width: 50%;margin-left: 50%; margin-top: 10%;">
+      <figure style="display: inline-block;text-align: center;">
+      <img src="media/aboutus/anina.jpg" alt="Jane" style="width:100px;height: 100px; border-radius: 50%;object-fit: cover;">
+      <figcaption style="margin: 5%;">Anina Pillai<br> anina.pillai@somaiya.edu</figcaption>
+    </figure>
     </div>
   </div>
 
   <div class="column">
-    <div class="card">
-      <img src="media/aboutus/final.jpg" alt="Mike" style="width:100%">
-      <div class="container">
-        <h2>Jigyassa Lamba</h2>
-        <p class="title">1811020 | TY Comps A</p>
-        <p>jigyassa.l@soamiya.edu</p>
-      </div>
+    <div style="height:50%; width: 50%; margin-top: 10%; margin-left: 20%; margin-right: 20%;">
+      <figure style="display: inline-block;text-align: center;">
+      <img src="media/aboutus/final.jpg" alt="Mike" style="width:100px;height: 100px; border-radius: 50%;object-fit: cover;">
+      <figcaption style="margin: 5%;">Jigyassa Lamba jigyassa.l@somaiya.edu</figcaption>
+    </figure>
     </div>
   </div>
   
   <div class="column">
-    <div class="card">
-      <img src="media/aboutus/aaditya.jpg" alt="John" style="width:100%">
-      <div class="container">
-        <h2>Aaditya Mahadevan</h2>
-        <p class="title">1811022 | TY Comps A</p>
-        <p>a.mahadevan@somaiya.edu</p>
-      </div>
+    <div style="height: 50%; width: 50%;margin-right: 50%; margin-top: 10%;">
+    <figure style="display: inline-block;text-align: center;">
+      <img src="media/aboutus/aaditya.jpg" alt="John" style="width:100px;height: 100px; border-radius: 50%;object-fit: scale-down;">
+      <figcaption style="margin: 5%;">Aaditya Mahadevan a.mahadevan@somaiya.edu</figcaption>
+    </figure>
     </div>
   </div>
 </div>
-
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
-  <div class="w3-xlarge w3-padding-32">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
- </div>
-</footer>
-
+<br><br>
 <script>
 // Used to toggle the menu on small screens when clicking on the menu button
 function myFunction() {
